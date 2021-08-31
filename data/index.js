@@ -6,7 +6,7 @@ export const LogoImage = {
 
 export const NavLinks = [
   {
-    name: "Studio de musique",
+    name: "Studio Kampus",
     url: "/",
   },
   {
@@ -955,66 +955,60 @@ import featureTab03 from "@/images/home_1/c3.jpg";
 
 export const FeatureTabData = {
   sectionContent: {
-    title: "why choose us",
-    subTitle: "our benefits",
+    title: "Pourquoi Studio Kampus",
+    subTitle: "Pour nos spécialisations",
     text:
-      "We are committed to providing our customers with exceptional service while\n offering our employees the best training."
+      "En tant que plus grands producteurs de livres audio au Canada, Studio Kampus amène ses multiples spécialités et ses infrastructures professionnelles afin d'offrir des services impeccables en matière audionumérique."
   },
   posts: [
     {
-      title: "Latest technology",
+      title: "Livres audio | Balados",
       content:
-        "There are many variations of passages of lorem ipsum available, but the majority have  suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
-      image: featureTab01,
-      lists: [
-        {
-          item: "Self-contained, state-of-the-art time clock"
-        },
-        {
-          item: "Scalability of up to 500 employees per time clock"
-        },
-        {
-          item: "The ability to connect up to 32 time clocks"
-        },
-        {
-          item: "Employee self-enrollment"
-        },
-        {
-          item: "Payroll integration"
-        },
-        {
-          item: "Built-in backup camera to verify failed punches"
-        }
-      ]
-    },
-    {
-      title: "Awesome Support",
-      content:
-        "There are many variations of passages of lorem ipsum available, but the majority have  suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
+        "Faites-nous confiance pour la production et la publication de votre livre audio de qualité professionnelle sur toutes les plateformes audio (Audible, Google Play, Kobo, iTunes et autres). Nos studios de musique et nos studios d'enregistrement professionnels pour livres audio sont opérés par une équipe complète comportant les meilleurs ingénieurs de son de Montréal.",
       image: featureTab02,
       lists: [
         {
-          item: "Self-contained, state-of-the-art time clock"
+          item: "Conception"
         },
         {
-          item: "Scalability of up to 500 employees per time clock"
+          item: "Recherche de narrateur"
         },
         {
-          item: "The ability to connect up to 32 time clocks"
+          item: "Enregistrement"
         },
         {
-          item: "Employee self-enrollment"
+          item: "Fabrication"
         },
         {
-          item: "Payroll integration"
-        },
-        {
-          item: "Built-in backup camera to verify failed punches"
+          item: "Diffusion"
         }
       ]
     },
     {
-      title: "1 Click demo install",
+      title: "Location de studio de musique",
+      content:
+        "Studio Kampus est spécialisé dans la location de studio de musique professionnel. Situés au centre-ville et sur le plateau mont royal, nos studios sont conçus sur mesure pour la production de livres audio, la réalisation de podcasts, pour les performances lives et les  représentations préenregistrées. Offrez-vous l'équipement le plus performant pour amener votre projet à un autre niveau.",
+      image: featureTab01,
+      lists: [
+        {
+          item: "Location de studios de musique"
+        },
+        {
+          item: "Location de studios d'enregistrement"
+        },
+        {
+          item: "Location de salles de podcasts"
+        },
+        {
+          item: "Location de studios pour livres audio"
+        },
+        {
+          item: "Location d'équipement technique"
+        }
+      ]
+    },
+    {
+      title: "Albums | Recherche de subventions",
       content:
         "There are many variations of passages of lorem ipsum available, but the majority have  suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
       image: featureTab03,
