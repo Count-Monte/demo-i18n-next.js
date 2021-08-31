@@ -15,6 +15,7 @@ import SearchContextProvider from "@/context/search-context";
 import MenuContextProvider from "@/context/menu-context";
 import SliderOne from "@/components/slider-one";
 import AboutOne from "@/components/about-one";
+import TabFeature from "@/components/feature-tab-1";
 
 const HomeOne = () => {
   return (
@@ -30,6 +31,7 @@ const HomeOne = () => {
           <FunfactOne />
           <TrustedClient />
           <AboutOne />
+          <TabFeature />
           <ClientCarouselOne />
           <ParallaxOne />
           <CallToActionOne extraClassName="ready" />
