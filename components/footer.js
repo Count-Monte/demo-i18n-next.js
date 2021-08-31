@@ -13,8 +13,8 @@ const Footer = () => {
                 <img src={light} alt=""/>
               </a>
               <p>
-              Studio Kampus : Les meilleurs studios d'enregistrement de Montréal et le plus grand producteur de livres audio au Canada. Confiez-nous votre projets 
-              d'enregistrements sonores, de production d'album, de production de livres audio, de votre mastering, de votre mixage ou pour vos besoins de design sonore particuliers.
+              Studio Kampus : Les meilleurs studios d'enregistrement de Montréal et le plus grand producteur de livres audio au Canada. Confiez-nous votre projet 
+              d'enregistrement sonore, de production d'album, de production de livres audio, de votre mastering, de votre mixage ou pour vos besoins de design sonore particuliers.
               </p>
             </aside>
           </div>
