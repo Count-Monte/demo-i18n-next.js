@@ -1010,26 +1010,23 @@ export const FeatureTabData = {
     {
       title: "Albums | Recherche de subventions",
       content:
-        "There are many variations of passages of lorem ipsum available, but the majority have  suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ",
+        "Que ce soit pour une production d’album, sa commercialisation, des activités scéniques au Canada ou des vitrines à l’international, plusieurs possibilités de subventions peuvent supporter financièrement à la réalisation de divers projets musicaux.",
       image: featureTab03,
       lists: [
         {
-          item: "Self-contained, state-of-the-art time clock"
+          item: "Musication"
         },
         {
-          item: "Scalability of up to 500 employees per time clock"
+          item: "CALQ"
         },
         {
-          item: "The ability to connect up to 32 time clocks"
+          item: "SOCAN"
         },
         {
-          item: "Employee self-enrollment"
+          item: "Commercialisation nationale"
         },
         {
-          item: "Payroll integration"
-        },
-        {
-          item: "Built-in backup camera to verify failed punches"
+          item: "Commercialisation internationale"
         }
       ]
     }
