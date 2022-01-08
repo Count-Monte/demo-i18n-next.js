@@ -767,7 +767,7 @@ export const TrustClientData = {
     "NOUS CONTRIBUONS AU DÉVELOPPEMENT ARTISTIQUE QUÉBÉCOIS ET SOMMES FIERS DE TRAVAILLER ET D’ÉVOLUER EN TRAVAILLANT AUX CÔTÉS DE TOUS NOS CLIENTS ET PARTENAIRES. STUDIO KAMPUS EST UN POINT RASSEMBLEUR POUR L’INDUSTRIE MUSICALE ET AUDIONUMÉRIQUE DU QUÉBEC !",
 };
 
-import ClientCarousel01 from "@/images/client/1.png";
+import ClientCarousel01 from "@/images/client/8.png";
 import ClientCarousel02 from "@/images/client/2.png";
 import ClientCarousel03 from "@/images/client/3.png";
 import ClientCarousel05 from "@/images/client/5.png";
@@ -806,7 +806,7 @@ export const ClientCarouselData = {
       image: ClientCarousel06
     },
     {
-      url: "https://vvla.lanf.ca/",
+      url: "https://vvla.ca/",
       image: ClientCarousel01
     },
     {
