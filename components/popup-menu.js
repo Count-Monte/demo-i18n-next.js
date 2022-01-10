@@ -20,7 +20,7 @@ const PopupMenu = () => {
         return (
           <span key={i} className={l === locale ? 'nav-selected' : ''}>
             <Link href={asPath} locale={l}>
-              {l}
+              {l.split('-')[0].toUpperCase()}
             </Link>
           </span>
         );
