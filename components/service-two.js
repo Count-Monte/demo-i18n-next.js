@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { ServicePostTwoData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 import ServiceCardTwo from "@/components/service-card-two";
 import { Button } from "react-bootstrap";
 import Link from "next/link";
@@ -8,6 +10,8 @@ import SliderTwo from "@/components/slider-two";
 
 
 const ServiceTwo = () => {
+  const { locale } = useRouter();
+  const { ServicePostTwoData } = getDataWithLocale(data, locale);
   const { sectionContent, posts } = ServicePostTwoData;
   const { title, subTitle, text } = sectionContent;
   return (

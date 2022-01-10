@@ -1,4 +1,5 @@
 import React from "react";
+import {useRouter} from 'next/router';
 import Footer from "@/components/footer";
 import Layout from "@/components/layout";
 import PageBanner from "@/components/page-banner";
@@ -15,12 +16,13 @@ import SearchContextProvider from "@/context/search-context";
 import HeaderOne from "@/components/header-one";
 
 const ServiceDetailsPage = () => {
+  const {locale} = useRouter();
   return (
     <MenuContextProvider>
       <SearchContextProvider>
         <Layout>
           <HeaderOne />
-          <PageBanner title="Nos services" />
+          <PageBanner title={locale === 'en-US' ? "Our Services" : "Nos services"} />
           <ServiceThree />
           <ServiceDetails />
           <ServiceOne />

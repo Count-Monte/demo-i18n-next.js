@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import SectionTitle from "@/components/section-title";
-import { FeatureTabData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const FeatureTabOne = () => {
+  const { locale } = useRouter();
+  const { FeatureTabData } = getDataWithLocale(data, locale);
   const [active, setActive] = useState(1);
   const { sectionContent, posts } = FeatureTabData;
   return (

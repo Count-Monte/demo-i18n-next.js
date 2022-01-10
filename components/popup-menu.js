@@ -1,15 +1,32 @@
-import React, { useContext, Fragment, useRef } from "react";
+import React, { useContext, Fragment, useRef, useMemo } from "react";
 import Link from "next/link";
 import { MenuContext } from "@/context/menu-context";
-import { LogoImage, NavLinks } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const PopupMenu = () => {
   const { menuStatus, updateMenuStatus } = useContext(MenuContext);
+  const {locale, locales, asPath} = useRouter();
+  const { LogoImage, NavLinks } = getDataWithLocale(data, locale);
   const menuEl = useRef(null);
   const handleMenuClick = (e) => {
     e.preventDefault();
     updateMenuStatus(!menuStatus);
   };
+  const languageSelecter = useMemo(() => (
+    <li className='d-inline-block language-toggler'>
+      {locales.map((l, i) => {
+        return (
+          <span key={i} className={l === locale ? 'nav-selected' : ''}>
+            <Link href={asPath} locale={l}>
+              {l}
+            </Link>
+          </span>
+        );
+      })}
+    </li>
+  ), [locale, locales, asPath]);
   return (
     <div className="show-overlay-nav">
       <div className="popup popup__menu">
@@ -84,6 +101,7 @@ const PopupMenu = () => {
                         </li>
                       );
                     })}
+                    {languageSelecter}
                   </ul>
                 </nav>
               </div>

@@ -1,13 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { TeamData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 import TeamCardTwo from "@/components/team-cardtwo";
 
 const TeamOne = () => {
+  const { locale } = useRouter();
+  const { TeamData } = getDataWithLocale(data, locale);
   return (
       <section className="commonSection blogPage">
         <h2 className="sec_title text-center">
-        Notre équipe d'administration
+        {locale === 'en-US' ? "Our administration team" : "Notre équipe d'administration"}
         </h2>
       <Container>
         <Row>

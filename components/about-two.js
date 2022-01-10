@@ -1,8 +1,13 @@
 import React from "react";
 import { AboutTwoData } from "@/data";
 import { Col, Container, Row } from "react-bootstrap";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const AboutTwo = () => {
+  const { locale } = useRouter();
+  const { AboutTwoData } = getDataWithLocale(data, locale);
   const { sectionContent, button, gallery } = AboutTwoData;
   return (
     <section className="commonSection ab_agency">

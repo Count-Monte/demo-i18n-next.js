@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
-import { FunfactData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const FunfactOne = () => {
+  const { locale } = useRouter();
+  const { FunfactData } = getDataWithLocale(data, locale);
   const [counter, setCounter] = useState({
     startCounter: false
   });

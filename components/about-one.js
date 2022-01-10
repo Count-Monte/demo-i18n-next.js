@@ -1,6 +1,11 @@
 import React from "react";
-import { AboutOneData1, AboutOneData2, AboutOneData3 } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
+
 const AboutOne = () => {
+  const { locale } = useRouter();
+  const { AboutOneData1, AboutOneData2, AboutOneData3 } = getDataWithLocale(data, locale);
   const { sectionContent1, gallery1 } = AboutOneData1;
   const { sectionContent2, gallery2 } = AboutOneData2;
   const { sectionContent3, gallery3 } = AboutOneData3;

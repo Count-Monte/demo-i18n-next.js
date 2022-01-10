@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
-import { ClientCarouselData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from "swiper";
 
@@ -10,6 +12,8 @@ import "swiper/swiper-bundle.min.css";
 SwiperCore.use([Pagination]);
 
 const ClientCarouselOne = () => {
+  const { locale } = useRouter();
+  const { ClientCarouselData } = getDataWithLocale(data, locale);
   const { sectionContent, items } = ClientCarouselData;
   const { title, subTitle, text } = sectionContent;
 

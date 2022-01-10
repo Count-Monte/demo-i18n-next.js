@@ -1,9 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ServicePostThreeData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 import ServiceCardThree from "@/components/service-card-three";
 
 const ServiceThree = () => {
+  const { locale } = useRouter();
+  const { ServicePostThreeData } = getDataWithLocale(data, locale);
   const { sectionContent, posts } = ServicePostThreeData;
   const { title, subTitle, text } = sectionContent;
   return (

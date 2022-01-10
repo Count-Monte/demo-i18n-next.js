@@ -1,7 +1,11 @@
 import React from "react";
-import { ContactInfosBlock, ContactInfosList } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const ContactInfos = () => {
+  const { locale } = useRouter();
+  const { ContactInfosBlock, ContactInfosList } = getDataWithLocale(data, locale);
   const { subTitle, title, description } = ContactInfosBlock;
   return (
     <section className="commonSection client_2">

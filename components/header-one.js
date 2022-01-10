@@ -1,14 +1,18 @@
-import React, { useState, useEffect, useContext } from "react";
-import { LogoImage, NavLinks } from "@/data";
+import React, { useState, useEffect, useContext, useMemo } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { SearchContext } from "@/context/search-context";
 import { MenuContext } from "@/context/menu-context";
 import Link from "next/link";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const HeaderOne = () => {
   const [sticky, setSticky] = useState(false);
   const { searchStatus, updateSearchStatus } = useContext(SearchContext);
   const { menuStatus, updateMenuStatus } = useContext(MenuContext);
+  const {locale, locales, asPath} = useRouter();
+  const { LogoImage, NavLinks } = getDataWithLocale(data, locale);
   const handleSearchClick = (e) => {
     e.preventDefault();
     updateSearchStatus(!searchStatus);
@@ -25,6 +29,20 @@ const HeaderOne = () => {
       setSticky(false);
     }
   };
+
+  const languageSelecter = useMemo(() => (
+    <div className='d-inline-block language-toggler'>
+      {locales.map((l, i) => {
+        return (
+          <span key={i} className={l === locale ? 'nav-selected' : ''}>
+            <Link href={asPath} locale={l}>
+              {l}
+            </Link>
+          </span>
+        );
+      })}
+    </div>
+  ), [locale, locales, asPath]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -92,6 +110,7 @@ const HeaderOne = () => {
               >
                 <i className="mei-menu"></i>
               </a>
+              {languageSelecter}
               <a
                 id="open-overlay-nav"
                 className="menu hamburger"

@@ -3,9 +3,13 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, EffectFade } from "swiper";
 import { Col, Container, Row } from "react-bootstrap";
-import { SliderOneData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 SwiperCore.use([Autoplay, Navigation, EffectFade]);
 const SliderOne = () => {
+  const { locale } = useRouter();
+  const { SliderOneData } = getDataWithLocale(data, locale);
   const mainSlideOptions = {
     slidesPerView: 1,
     loop: true,

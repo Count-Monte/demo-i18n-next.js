@@ -1,8 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { TrustClientData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const TrustedClient = ({ extraClassName }) => {
+  const { locale } = useRouter();
+  const { TrustClientData } = getDataWithLocale(data, locale);
   const { image, title, text, url } = TrustClientData;
   return (
     <section className={`commonSection trustClient ${extraClassName}`}>

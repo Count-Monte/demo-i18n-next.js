@@ -130,6 +130,12 @@
 .navigator a:hover {
   color: #e62b4a;
 }
+.language-toggler>*:first-child::after {
+  content: ' | '
+}
+.navigator .language-toggler {
+  margin-right: 10px;
+}
 .black_color {
   border-color: #e5e5e5;
 }

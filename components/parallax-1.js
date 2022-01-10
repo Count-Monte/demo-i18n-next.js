@@ -1,8 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ParallaxOneData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 
 const ParallaxOne = () => {
+  const { locale } = useRouter();
+  const { ParallaxOneData } = getDataWithLocale(data, locale);
   const { iconName, title, specialText, text } = ParallaxOneData;
   return (
     <section className="commonSection testimonial">

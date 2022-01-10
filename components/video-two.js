@@ -1,11 +1,15 @@
 import React, { Fragment, useState } from "react";
-import { VideoTwoData } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 import ModalVideo from "react-modal-video";
 import SectionTitle from "@/components/section-title";
 import "react-modal-video/css/modal-video.min.css";
 import { Col, Container, Row } from "react-bootstrap";
 
 const VideoTwo = () => {
+  const { locale } = useRouter();
+  const { VideoTwoData } = getDataWithLocale(data, locale);
   const [isOpen, setOpen] = useState(false);
   const { sectionContent, video } = VideoTwoData;
   return (

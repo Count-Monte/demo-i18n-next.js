@@ -1,4 +1,5 @@
 import React from "react";
+import {useRouter} from 'next/router';
 import Footer from "@/components/footer";
 import Layout from "@/components/layout";
 import ContactInfos from "@/components/contact-infos";
@@ -10,12 +11,13 @@ import HeaderOne from "@/components/header-one";
 import TeamOne from "@/components/team-one";
 
 const ContactPage = () => {
+  const {locale} = useRouter();
   return (
     <MenuContextProvider>
       <SearchContextProvider>
         <Layout>
           <HeaderOne />
-          <PageBanner title="Contactez-nous" />
+          <PageBanner title={locale === 'en-US' ? "Contact US" : "Contactez-nous"} />
           <ContactInfos />
           <TeamOne />
           <GoogleMap extraClass="contact-page" />

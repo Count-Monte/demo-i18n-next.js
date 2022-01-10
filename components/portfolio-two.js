@@ -1,9 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { PortfolioData2 } from "@/data";
+import { useRouter } from 'next/router'
+import getDataWithLocale from '@/utils/getDataWithLocale';
+import data from "@/data";
 import PortfolioCard from "@/components/portfolio-card";
 
 const PortfolioTwo = () => {
+  const { locale } = useRouter();
+  const { PortfolioData2 } = getDataWithLocale(data, locale);
   return (
     <section className="commonSection porfolioPage">
       <Container>
